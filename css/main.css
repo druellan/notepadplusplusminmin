@@ -104,6 +104,11 @@ body {
   border-radius: 2px;
 }
 
+.reveal .big-shadow {
+  background: rgba(0,0,0,.7);
+  opacity: 1;
+}
+
 
 /* Effects */
 
