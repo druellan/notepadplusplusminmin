@@ -1,0 +1,226 @@
+/*!
+ * @druellan
+ */
+
+body {
+  background: #fafafa;
+}
+
+.reveal {
+  background: -webkit-radial-gradient(center, circle cover, #fff 30%, #a0a0b0 100%);
+}
+
+.reveal h1 {
+  text-shadow: 0 5px 0 rgba(250,250,250,.7), 0 10px 20px rgba(0,0,0,.4);
+}
+.reveal h2 {
+  text-shadow: 0 5px 0 rgba(250,250,250,.7), 0 10px 10px rgba(0,0,0,.4);
+}
+.reveal h3 {
+  text-shadow: 0 5px 0 rgba(250,250,250,.7);
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6,
+.reveal p,
+.reveal pre,
+.reveal ul {
+  opacity: .7;
+  color: black;
+  position: relative;
+}
+
+.reveal .has-dark-background h2 {
+  text-shadow: 0 5px 0 rgba(10,10,10,.7), 0 10px 20px rgba(0,0,0,.2);
+}
+.reveal .has-dark-background h3 {
+  text-shadow: 0 5px 0 rgba(10,10,10,.7);
+}
+
+.reveal .has-dark-background h1,
+.reveal .has-dark-background h2,
+.reveal .has-dark-background h3,
+.reveal .has-dark-background h4,
+.reveal .has-dark-background h5,
+.reveal .has-dark-background h6,
+.reveal .has-dark-background p,
+.reveal .has-dark-background pre,
+.reveal .has-dark-background ul,
+.reveal .has-dark-background {
+  color: #fafafa;
+}
+
+.reveal .background-logo {
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.reveal section img {
+  position: relative;
+  z-index: 100;
+}
+.reveal section img.plain {
+  border: 0;
+  box-shadow: none;
+  background: none;
+}
+.reveal section img.glow {
+  box-shadow: 0 0 70px rgba(255,255,255,.6);
+}
+.reveal section img.shadow {
+  box-shadow: 0 6px 12px rgba(16,16,16,.6);
+}
+.reveal section img.fullwidth {
+  margin-top: -20px;
+  height: 100%;
+}
+
+.reveal section img.img-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 800px 200px rgba(30,0,60,.8);
+  z-index: 200;
+}
+.reveal section .visible img.img-overlay {
+  display: block;
+}
+.reveal section img.img-overlay.img-overlay-right {
+  right: 0;
+  left: auto;
+}
+.reveal .line-through {
+  text-decoration: line-through;
+  opacity: .6;
+}
+.reveal code {
+  background: rgba(255,255,255,.3);
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2px;
+}
+
+.reveal .big-shadow {
+  background: rgba(0,0,0,.7);
+  padding: 20px;
+  opacity: 1;
+}
+
+
+/* Effects */
+
+.present .effect-fadein-delayed {
+  visibility: hidden;
+  animation-name: delayed-fadein;
+  animation-duration: .3s;
+  animation-timing-function: linear;
+  animation-direction: initial;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+@keyframes delayed-fadein {
+  0% {
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.present .effect-scroll-delayed {
+  z-index: 100;
+  animation-name: delayed-scroll;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-direction: initial;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+}
+
+@keyframes delayed-scroll {
+  0% {
+    margin-top: 15px;
+  }
+  100% {
+    margin-top: -120px;
+  }
+}
+
+.present .effect-fadein-zoom-delayed {
+  visibility: hidden;
+  z-index: 100;
+  animation-name: delayed-fadein-zoom;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-direction: initial;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+.past .effect-fadein-zoom-delayed {
+    visibility: visible;
+    margin-top: 60px;
+    transform: scale(1.35);  
+}
+
+@keyframes delayed-fadein-zoom {
+  0% {
+    opacity: 0;
+    visibility: visible;
+  }
+  10% {
+    opacity: 1;
+    visibility: visible;
+  }
+  90% {
+    visibility: visible;
+    transform: scale(1);
+    margin-top: 15px;
+  }
+  100% {
+    visibility: visible;
+    margin-top: 60px;
+    transform: scale(1.35);
+  }
+}
+
+.effect-background-alert {
+  animation-name: background-alert;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes background-alert {
+  0% {
+    background: #a00707;
+  }
+  100% {
+    background: #f00f0f;
+  }
+}
+
+
+.effect-float {
+  animation-name: element-float;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes element-float {
+  0% {
+    margin-top: -0;
+  }
+  100% {
+    margin-top: -10px;
+  }
+}
